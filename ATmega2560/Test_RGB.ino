@@ -24,7 +24,7 @@ void setup() {
 // Loop: Set Pixels' color
 void loop() {
   for(int nI = 0; nI < NUM; nI++) {
-    npPixels.setPixelColor(nI, pixels.Color(0, 255, 255));
+    npPixels.setPixelColor(nI, npPixels.Color(0, 255, 255));
   }
   
   npPixels.show();
