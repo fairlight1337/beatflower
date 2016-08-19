@@ -1,4 +1,4 @@
-#include <SoftSerialHacked.h>
+#include <RecvOnlySoftSerial.h>
 #include <Adafruit_NeoPixel.h>
 
 
@@ -18,8 +18,7 @@
 
 // Global variables
 Adafruit_NeoPixel npPixels = Adafruit_NeoPixel(NUM_LEDS, LEDS_PIN, NEO_GRB + NEO_KHZ800);
-SoftSerialHacked softSerial(RX_PIN);
-
+RecvOnlySoftSerial roSoftSerial(RX_PIN);
 
 char cBuffer[BUFFER_SIZE];
 unsigned int unBufferIndex = 0;
@@ -31,13 +30,13 @@ void setup() {
   npPixels.begin();
   
   pinMode(RX_PIN, INPUT);
-  softSerial.begin(9600);
+  roSoftSerial.begin(9600);
 }
 
 
 void loop() {
-  if(softSerial.available()) {
-    char c = softSerial.read();
+  if(roSoftSerial.available()) {
+    char c = roSoftSerial.read();
     
     if(c == 13) {
       int nInteger, nR, nG, nB;
