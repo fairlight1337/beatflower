@@ -9,6 +9,8 @@ RC Navy (2012-2015): http://p.loussouarn.free.fr
 
 SoftwareSerial.cpp (formerly NewSoftSerial.cpp) - 
 Multi-instance software serial library for Arduino/Wiring
+-- Ripped out anything TX related and slimmed down the library as much as
+   possible by Jan Winkler (http://github.com/fairlight1337)
 -- Interrupt-driven receive and other improvements by ladyada
    (http://ladyada.net)
 -- Tuning, circular buffer, derivation from class Print/Stream,
