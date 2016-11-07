@@ -164,6 +164,7 @@ const int XMIT_START_ADJUSTMENT = 6;
 // Statics
 //
 
+
 RecvOnlySoftSerial *RecvOnlySoftSerial::active_object = 0;
 char RecvOnlySoftSerial::_receive_buffer[_SS_MAX_RX_BUFF]; 
 volatile uint8_t RecvOnlySoftSerial::_receive_buffer_tail = 0;
