@@ -15,3 +15,6 @@ Run it like to:
 cd bin
 ./BeatFlower-demo
 ```
+
+If it doesn't work, adjust the `ttyUSB<n>` port in the `demo.cpp`
+source file.
